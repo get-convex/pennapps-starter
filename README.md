@@ -16,30 +16,29 @@ npm install
 
 After you create a Convex account at https://dashboard.convex.dev, run the following command in a terminal in the root directory of this repository.
 
+
+Log in to Convex,
+
 ```bash
 npx convex login
 ```
 
-Now you can initialize a new Convex project,
+initialize a new Convex project,
 
 ```bash
 npx convex init
 ```
 
-and push the Convex functions for this project.
+and then run the following two commands in two different terminals:
 
 ```bash
-npx convex push
+npx convex dev
 ```
-
-All that's left to do is to run your code locally with a Convex backend with
 
 ```bash
 npm run dev
 ```
 
-## Deploy this app
+Once everything is working, commit your code and deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
 
-You can deploy this app lots of places, but a great place to run it is on [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=convex-penn-apps).
-
-Push your app to GitHub, create an account with Vercel, and connect this app in GitHub. This gives you deploys on every push to GitHub and every merge of a PR!
+Use `npx convex deploy && npm run build` as the build command and set the `CONVEX_DEPLOY_KEY` environmental variable in Vercel ([Documentation](https://docs.convex.dev/getting-started/deployment/hosting/vercel)).
